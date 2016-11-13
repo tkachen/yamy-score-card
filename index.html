@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>YAMY</title>
+	<link rel="stylesheet" href="yamy.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="jquery.cookie.js"></script>
+	<script src="yamy.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<table id="left">
+			<tr>
+				<td></td>
+				<td>
+					<div class="card green" style="top: 4vmin; left: 4vmin"></div>
+				</td>
+				<td>
+					<div class="card green" style="top: 3vmin; left: 2vmin"></div>
+					<div class="card red" style="top: 5vmin; left: 6vmin"></div>
+				</td>
+				<td>
+					<div class="card green" style="top: 1vmin; left: 2vmin"></div>
+					<div class="card red" style="top: 3vmin; left: 6vmin"></div>
+					<div class="card yellow" style="top: 7vmin; left: 4vmin"></div>
+				</td>
+				<td>
+					<div class="card green" style="top: 1vmin; left: 3vmin"></div>
+					<div class="card red" style="top: 3vmin; left: 7vmin"></div>
+					<div class="card yellow" style="top: 6vmin; left: 5vmin"></div>
+					<div class="card blue" style="top: 4vmin; left: 1vmin"></div>
+				</td>
+			</tr>
+			<tr id="10">
+				<td>
+					<div class="dice dice-1">
+						<span class="pip"></span>
+					</div>
+				</td>
+				<td id="11">1</td>
+				<td id="12">2</td>
+				<td id="13">3</td>
+				<td id="14">4</td>
+			</tr>
+			<tr id="20">
+				<td>
+					<div class="dice dice-2">
+						<span class="pip"></span>
+						<span class="pip"></span>
+					</div>
+				</td>
+				<td id="21">2</td>
+				<td id="22">4</td>
+				<td id="23">6</td>
+				<td id="24">8</td>
+			</tr>
+			<tr id="30">
+				<td>
+					<div class="dice dice-3">
+						<span class="pip"></span>
+						<span class="pip"></span>
+						<span class="pip"></span>
+					</div>
+				</td>
+				<td id="31">3</td>
+				<td id="32">6</td>
+				<td id="33">9</td>
+				<td id="34">12</td>
+			</tr>
+			<tr id="40">
+				<td>
+					<div class="dice dice-4">
+						<div class="column">
+							<span class="pip"></span>
+							<span class="pip"></span>
+						</div>
+						<div class="column">
+							<span class="pip"></span>
+							<span class="pip"></span>
+						</div>
+					</div>
+				</td>
+				<td id="41">4</td>
+				<td id="42">8</td>
+				<td id="43">12</td>
+				<td id="44">16</td>
+			</tr>
+			<tr id="50">
+				<td>
+					<div class="dice dice-5">
+						<div class="column">
+							<span class="pip"></span>
+							<span class="pip"></span>
+						</div>
+						<div class="column">
+							<span class="pip"></span>
+						</div>
+						<div class="column">
+							<span class="pip"></span>
+							<span class="pip"></span>
+						</div>
+					</div>
+				</td>
+				<td id="51">5</td>
+				<td id="52">10</td>
+				<td id="53">15</td>
+				<td id="54">20</td>
+			</tr>
+			<tr id="60">
+				<td>
+					<div class="dice dice-6">
+						<div class="column">
+							<span class="pip"></span>
+							<span class="pip"></span>
+							<span class="pip"></span>
+						</div>
+						<div class="column">
+							<span class="pip"></span>
+							<span class="pip"></span>
+							<span class="pip"></span>
+						</div>
+					</div>
+				</td>
+				<td id="61">6</td>
+				<td id="62">12</td>
+				<td id="63">18</td>
+				<td id="64">24</td>
+			</tr>
+		</table>
+
+
+
+
+
+		<table id="right">
+			<tr>
+				<td>
+					<div class="button" id="twopairs">
+						<div class="points">10</div>
+						<div class="button-image">
+							<div class="dice dice-small dice-1 yellow" style="transform: rotate(20deg); top: 5vmin; left: 10vmin">
+								<span class="pip"></span>
+							</div>
+							<div class="dice dice-small dice-1 green" style="transform: rotate(20deg); top: 3vmin; left: 16vmin">
+								<span class="pip"></span>
+							</div>
+							<div class="dice dice-small dice-6 yellow" style="transform: rotate(0deg); top: 17vmin; left: 13vmin">
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+							</div>
+							<div class="dice dice-small dice-6 red" style="transform: rotate(50deg); top: 16vmin; left: 5vmin">
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+							</div>
+						</div> 		
+					</div>
+				</td>
+				<td>
+					<div class="button" id="triple">
+						<div class="points">15</div>
+						<div class="button-image">
+							<div class="dice dice-small dice-5 yellow" style="transform: rotate(-30deg); top: 8vmin; left: 16vmin">
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+								<div class="column">
+									<span class="pip"></span>
+								</div>
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+							</div>
+							<div class="dice dice-small dice-5 red" style="transform: rotate(-30deg); top: 15vmin; left: 14vmin">
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+								<div class="column">
+									<span class="pip"></span>
+								</div>
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+							</div>
+							<div class="dice dice-small dice-5 blue" style="transform: rotate(80deg); top: 16vmin; left: 6vmin">
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+								<div class="column">
+									<span class="pip"></span>
+								</div>
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+							</div>
+						</div> 		
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="button" id="fullhouse">
+						<div class="points">20</div>
+						<div class="button-image">
+							<div class="dice dice-small dice-1 blue" style="transform: rotate(20deg); top: 5vmin; left: 10vmin">
+								<span class="pip"></span>
+							</div>
+							<div class="dice dice-small dice-1 green" style="transform: rotate(20deg); top: 3vmin; left: 16vmin">
+								<span class="pip"></span>
+							</div>
+							<div class="dice dice-small dice-4 red" style="transform: rotate(-30deg); top: 15vmin; left: 17vmin">
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+							</div>
+							<div class="dice dice-small dice-4 yellow" style="transform: rotate(0deg); top: 17vmin; left: 10vmin">
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+							</div>
+							<div class="dice dice-small dice-4 green" style="transform: rotate(50deg); top: 16vmin; left: 2vmin">
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+							</div>
+						</div> 		
+					</div>
+				</td>
+				<td>
+					<div class="button" id="street">
+						<div class="points">25</div>
+						<div class="button-image">
+							<div class="dice dice-small dice-1 blue" style="transform: rotate(5deg); top: 2vmin; left: 10vmin">
+								<span class="pip"></span>
+							</div>
+							<div class="dice dice-small dice-2 green" style="transform: rotate(-30deg); top: 8vmin; left: 16vmin">
+								<span class="pip"></span>
+								<span class="pip"></span>
+							</div>
+							<div class="dice dice-small dice-3 red" style="transform: rotate(-30deg); top: 15vmin; left: 14vmin">
+								<span class="pip"></span>
+								<span class="pip"></span>
+								<span class="pip"></span>
+							</div>
+							<div class="dice dice-small dice-4 yellow" style="transform: rotate(80deg); top: 16vmin; left: 6vmin">
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+							</div>
+							<div class="dice dice-small dice-5 green" style="transform: rotate(50deg); top: 9vmin; left: 2vmin">
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+								<div class="column">
+									<span class="pip"></span>
+								</div>
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+							</div>
+						</div> 		
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="button" id="kare">
+						<div class="points">30</div>
+						<div class="button-image">
+							<div class="dice dice-small dice-1 blue" style="transform: rotate(5deg); top: 2vmin; left: 10vmin">
+								<span class="pip"></span>
+							</div>
+							<div class="dice dice-small dice-1 yellow" style="transform: rotate(-30deg); top: 8vmin; left: 16vmin">
+								<span class="pip"></span>
+							</div>
+							<div class="dice dice-small dice-1 red" style="transform: rotate(-30deg); top: 15vmin; left: 14vmin">
+								<span class="pip"></span>
+							</div>
+							<div class="dice dice-small dice-1 green" style="transform: rotate(80deg); top: 16vmin; left: 6vmin">
+								<span class="pip"></span>
+							</div>
+						</div> 		
+					</div>
+				</td>
+				<td>
+					<div class="button" id="flash">
+						<div class="points">50</div>
+						<div class="button-image">
+							<div class="dice dice-small dice-1 yellow" style="transform: rotate(5deg); top: 2vmin; left: 10vmin">
+								<span class="pip"></span>
+							</div>
+							<div class="dice dice-small dice-2 yellow" style="transform: rotate(-30deg); top: 8vmin; left: 16vmin">
+								<span class="pip"></span>
+								<span class="pip"></span>
+							</div>
+							<div class="dice dice-small dice-3 yellow" style="transform: rotate(-30deg); top: 15vmin; left: 14vmin">
+								<span class="pip"></span>
+								<span class="pip"></span>
+								<span class="pip"></span>
+							</div>
+							<div class="dice dice-small dice-4 yellow" style="transform: rotate(80deg); top: 16vmin; left: 6vmin">
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+							</div>
+							<div class="dice dice-small dice-6 yellow" style="transform: rotate(50deg); top: 9vmin; left: 2vmin">
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+								<div class="column">
+									<span class="pip"></span>
+									<span class="pip"></span>
+									<span class="pip"></span>
+								</div>
+							</div>
+
+						</div> 		
+					</div>
+				</td>
+			</tr>
+		</table>
+		<table id="results">
+			<tr>
+				<td>Round</td>
+				<td id="result-round"></td>
+			</tr>
+			<tr>
+				<td>A</td>
+				<td id="result-a"></td>
+			</tr>
+			<tr>
+				<td>B</td>
+				<td id="result-b"></td>
+			</tr>
+			<tr>
+				<td>A+B</td>
+				<td id="result-sum"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<button id="reset-button">Reset</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
